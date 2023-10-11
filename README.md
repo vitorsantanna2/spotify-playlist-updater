@@ -65,6 +65,7 @@ An automatic playlist updater using Spotify API and Authorization code flow in P
 
 ## Authors
 This repository is a fork from [Aeriie](https://github.com/aeriie) on GitHub.
+
 [Vitor Santanna](https://github.com/vitorsantanna2) on GitHub
 
 ## Version History
