@@ -23,7 +23,6 @@ An automatic playlist updater using Spotify API and Authorization code flow in P
 ##### Spotipy
 * Python library for the Spotify Web API
 * [Installation Link](https://spotipy.readthedocs.io/en/2.19.0/#installation)
-* For Windows, you can run ``` py -m pip install spotipy --upgrade ``` in CMD to install. 
 
 #
 
