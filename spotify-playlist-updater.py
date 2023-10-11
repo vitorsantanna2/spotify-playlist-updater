@@ -1,32 +1,35 @@
+from schedule import every, repeat, run_pending
+import os
+from dotenv import load_dotenv
 import time
-import schedule
 import spotipy
 import spotipy.util as util
 from spotipy.oauth2 import SpotifyOAuth
 
 import base64
-with open("C:\\Users\\You\\YourWorkingDirectory\\Data\\PlaylistPhoto.jpeg", "rb") as img_file:
+with open("./data/photo.png", "rb") as img_file:
     myimage = base64.b64encode(img_file.read())
 
+load_dotenv()
+
 print("Starting Playlist updater")
-  
+
+@repeat(every(30).seconds)
 def func():
     scope = 'playlist-modify-public ugc-image-upload'
 
-    # Spotify Username
-    username = 'username'
-
+    username = os.environ['USER_SPOTIFY']
     # Spotify Developer App Client ID and Secret ID
-    SPOTIPY_CLIENT_ID = 'clientid'
-    SPOTIPY_CLIENT_SECRET = 'clientsecret'
-
-    token = util.prompt_for_user_token(username,scope,SPOTIPY_CLIENT_ID,SPOTIPY_CLIENT_SECRET,redirect_uri='http://yourdomain.com')
+    SPOTIPY_CLIENT_ID = os.environ['CLIENT_ID']
+    SPOTIPY_CLIENT_SECRET = os.environ['CLIENT_SECRET']
+    redirect_uri = os.environ['REDIRECT_URI']
+    id = os.environ['PLAYLIST_ID']
+    token = util.prompt_for_user_token(username,scope,SPOTIPY_CLIENT_ID,SPOTIPY_CLIENT_SECRET,redirect_uri)
     sp = spotipy.Spotify(auth=token)
 
     # Playlist Data
-    id = 'https://open.spotify.com/playlist/yourplaylist'
-    playlist_name = 'Playlist Name'
-    playlist_description = 'Playlist Description'
+    playlist_name = 'new_playlist'
+    playlist_description = 'playlist_one'
     image_b64 = myimage
 
     sp.playlist_upload_cover_image(playlist_id=id, image_b64 = myimage)
@@ -34,9 +37,7 @@ def func():
 
     print("Playlist updated")
 
-def func2():
-    schedule.every(1).minutes.do(func)
-    return schedule.CancelJob
-
+while True:
+    run_pending()
+    time.sleep(1)
 #You can replace minutes with seconds, hours, etc
-schedule.every(1).minutes.do(func2)
