@@ -62,6 +62,7 @@ An automatic playlist updater using Spotify API and Authorization code flow in P
 
 ### Running the Script
  Use `chmod +x scriptname.py` to grant execute permissions
+ 
  Use `nohup python3 ./script_name.py &` to run in background
 
 ## Authors
