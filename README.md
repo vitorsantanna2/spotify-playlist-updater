@@ -78,6 +78,6 @@ This repository is a fork from [Aeriie](https://github.com/aeriie) on GitHub.
    * Added improved reliability for schedule function
    * Cleaned up code
 * 0.3
-  * Add support to env enviroments
+  * Add support to env environments
   * Simplify code with @repeat method
   * Nohup instructions to run in background
