@@ -61,43 +61,17 @@ An automatic playlist updater using Spotify API and Authorization code flow in P
 * **Save the script once your changes are made.** 
 
 
-
 ### Running the Script
  Use `nohup python3 ./script_name.py &` to run in background
 
-## Thank you
-
-If you enjoyed my project, please feel free to leave tips on my [Ko-Fi. https://ko-fi.com/autumntillman](https://ko-fi.com/autumntillman)
-or [Paypal](https://www.paypal.com/paypalme/autterpop?locale.x=en_US).
-
-## FAQ
-* How do I schedule this to run at a set time every day instead of all the time?
-   * replace schedule.every(1).minutes.do(func2) with schedule.every().day.at('13:56').do(sched_job)
-   * note that time is based on military time (24 hour clock)
-   * you can replace 'day' with a specific day of the week as well
-
-## Help
-
-* If you get an error that "Read timed out. (read timeout=5)", restart the script. 
-* If your script doesnt get past "Starting Playlist Updater", run the script using IDLE:
-   * Right click spotify-playlist-updater and click Edit with IDLE
-   * Click F5 to run the script
-      * Let the script run. Any errors will be listed as the script encounters them.
-    
-If you're having issues getting this setup, feel free to reach out to me via Discord: .aeriie
-
-To report code issues, create a new issue on Github or reach out to me directly at [autumntillman0@gmail.com](mailto:autumntillman0@gmail.com)
-
 ## Authors
-
-[Aeriie](https://github.com/aeriie) on GitHub
+This repository is a fork from [Aeriie](https://github.com/aeriie) on GitHub.
 [Vitor Santanna](https://github.com/vitorsantanna2) on GitHub
 
 ## Version History
 
 * 0.1
     * Initial Release
- 
 * 0.2
    * Added improved reliability for schedule function
    * Cleaned up code
