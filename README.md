@@ -16,6 +16,10 @@ An automatic playlist updater using Spotify API and Authorization code flow in P
 * A Package Management System for Python.
 * [Installation Link](https://pip.pypa.io/en/stable/installation/)
 
+##### Dotenv
+* Python Module that loads environment variables from a .env file.
+* [Installation Link](https://pypi.org/project/python-dotenv/)
+
 ##### Schedule
 * Python job scheduler to run the script on a timer.
 * [Installation Link](https://schedule.readthedocs.io/en/stable/installation.html)
@@ -32,7 +36,7 @@ An automatic playlist updater using Spotify API and Authorization code flow in P
 
 * Install the dependencies listed above. 
 * Choose a location on your device (I'll refer to this as the working directory)
-* Download the latest release of [spotify-playlist-updater](https://github.com/aeriie/spotify-playlist-updater/) to the working directory. 
+* Download the latest release of [spotify-playlist-updater](https://github.com/vitorsantanna2/spotify-playlist-updater) to the working directory. 
 * Save your playlist photo (if applicable) in the ``data`` folder of the working directory
     * The photo must be 150KB or less. If it is too large, resize the photo. 
     * You can use this website to resize your image: https://www.resizepixel.com/reduce-image-in-kb/
@@ -60,7 +64,7 @@ An automatic playlist updater using Spotify API and Authorization code flow in P
 * **Save the script once your changes are made.** 
 
 
-### Running the Script
+### Running the Script on Linux
  Use `chmod +x scriptname.py` to grant execute permissions
  
  Use `nohup python3 ./script_name.py &` to run in background
@@ -68,7 +72,7 @@ An automatic playlist updater using Spotify API and Authorization code flow in P
 ## Authors
 This repository is a fork from [Aeriie](https://github.com/aeriie) on GitHub.
 
-[Vitor Santanna](https://github.com/vitorsantanna2) on GitHub
+Updated by [Vitor Santanna](https://github.com/vitorsantanna2) on GitHub
 
 ## Version History
 
