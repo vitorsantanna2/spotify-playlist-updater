@@ -13,10 +13,15 @@ def func():
     scope = 'playlist-modify-public ugc-image-upload'
 
     username = os.environ['USER_SPOTIFY']
+    print("USERNAME OK")
     SPOTIPY_CLIENT_ID = os.environ['CLIENT_ID']
+    print("client id OK")
     SPOTIPY_CLIENT_SECRET = os.environ['CLIENT_SECRET']
+    print("client secret OK")
     redirect_uri = os.environ['REDIRECT_URI']
+    print("redirect uri OK")
     token = util.prompt_for_user_token(username,scope,SPOTIPY_CLIENT_ID,SPOTIPY_CLIENT_SECRET,redirect_uri)
+    print("TOKEN OK")
     sp = spotipy.Spotify(auth=token)
 
     # Playlist Data
