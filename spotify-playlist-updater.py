@@ -1,7 +1,5 @@
-from schedule import every, repeat, run_pending
 import os
 from dotenv import load_dotenv
-import time
 import spotipy
 import spotipy.util as util
 from spotipy.oauth2 import SpotifyOAuth
@@ -11,7 +9,6 @@ with open("./data/photo.png", "rb") as img_file:
     myimage = base64.b64encode(img_file.read())
 load_dotenv()
 print("Starting Playlist updater")
-@repeat(every(1).minutes)
 def func():
     scope = 'playlist-modify-public ugc-image-upload'
 
@@ -33,7 +30,5 @@ def func():
 
     print("Playlist updated")
 
-while True:
-    run_pending()
-    time.sleep(1)
+func()
 #You can replace minutes with seconds, hours, etc
